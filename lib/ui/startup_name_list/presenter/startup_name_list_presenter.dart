@@ -39,6 +39,9 @@ class StartupNameListPresenter
     _useCase.eventToggle(id);
   }
 
+  void eventShowFavorites() {
+    _router.routeFavorites();
+  }
 
   @override
   void dispose() {

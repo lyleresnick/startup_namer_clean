@@ -45,7 +45,7 @@ class StartupNameFavoriteListScene extends StatelessWidget {
                       Container(
                         child: FlatButton(
                           child: Text('Done', style: TextStyle(fontSize: 20,)),
-                          onPressed: () => Navigator.of(context).pop(),
+                          onPressed: _presenter.eventDone,
                         ),
                         height: 40,
                       ),

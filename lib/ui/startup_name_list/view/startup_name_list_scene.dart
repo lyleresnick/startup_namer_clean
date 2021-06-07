@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:startup_namer_clean/ui/startup_name_favorite_list/assembly/startup_name_favorite_list_assembly.dart';
 import 'package:startup_namer_clean/ui/startup_name_list/presenter/startup_name_list_presenter.dart';
 import 'package:startup_namer_clean/ui/startup_name_list/presenter/startup_name_list_presenter_output.dart';
 import 'package:startup_namer_clean/ui/startup_name_list/presenter/startup_name_list_view_model.dart';
@@ -41,7 +40,7 @@ class StartupNameListScene extends StatelessWidget {
                   actions: [
                     IconButton(
                         icon: Icon(Icons.list),
-                        onPressed: () => _showFavorites(context)),
+                        onPressed: _presenter.eventShowFavorites),
                   ],
                 ),
                 body: ListView.builder(
@@ -54,13 +53,6 @@ class StartupNameListScene extends StatelessWidget {
                     }));
           }
         });
-  }
-
-  void _showFavorites(BuildContext context) {
-    Navigator.of(context)
-        .push(MaterialPageRoute<void>(builder: (BuildContext context) {
-      return StartupNameFavoriteListAssembly().scene;
-    }));
   }
 }
 

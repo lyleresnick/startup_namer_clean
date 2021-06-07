@@ -24,6 +24,10 @@ class StartupNameFavoriteListPresenter
     });
   }
 
+  void eventDone() {
+    _router.routeFavoritesDone();
+  }
+
   @override
   void dispose() {
     _useCase.dispose();

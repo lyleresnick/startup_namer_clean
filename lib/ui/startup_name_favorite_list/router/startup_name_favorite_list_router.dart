@@ -1,1 +1,3 @@
-abstract class StartupNameFavoriteListRouter {}
+abstract class StartupNameFavoriteListRouter {
+  void routeFavoritesDone();
+}
